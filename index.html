@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Veterinaria Mr. Patitas | Barva, Heredia — Costa Rica</title>
+<meta name="description" content="Clínica Veterinaria Mr. Patitas en Barva, Heredia. Consulta general, cirugías, laboratorio, farmacia, grooming y hospedaje para tu mascota. Atención prioritaria en emergencias. 4.6★ en Google.">
+<meta name="theme-color" content="#26215C">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Clínica Veterinaria Mr. Patitas — Barva, Heredia">
+<meta property="og:description" content="Cuidamos a tu mejor amigo como familia. Consulta, cirugías, laboratorio, grooming y hospedaje en Barva, Heredia.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1200&h=630&q=80&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clínica Veterinaria Mr. Patitas — Barva, Heredia">
+<meta name="twitter:description" content="Cuidamos a tu mejor amigo como familia. Consulta, cirugías, laboratorio, grooming y hospedaje en Barva, Heredia.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1200&h=630&q=80&auto=format&fit=crop">
+
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=900&h=1000&q=80&auto=format&fit=crop" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          purple: { dark: '#26215C', DEFAULT: '#3C3489', medium: '#534AB7', light: '#EEEDFE' },
+          aqua: { dark: '#085041', DEFAULT: '#0F6E56', medium: '#1D9E75', light: '#E1F5EE' },
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="stylesheet" href="css/style.css">
+
+<!-- El campo "url" se omite del JSON-LD hasta confirmar el dominio real donde se publicará el sitio -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VeterinaryCare",
+  "name": "Clínica Veterinaria Mr. Patitas",
+  "image": "https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1200&h=630&q=80&auto=format&fit=crop",
+  "telephone": "+506-2262-0400",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "125 metros sur de la iglesia católica de Barva, C/ Rothe, San Pablo",
+    "addressLocality": "Barva",
+    "addressRegion": "Heredia",
+    "addressCountry": "CR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.6",
+    "reviewCount": "69"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "opens": "08:00",
+    "closes": "22:00"
+  }]
+}
+</script>
+</head>
+<body class="bg-white text-purple-dark font-sans">
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="site-header hero-transparent fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Mr. Patitas — Ir al inicio">
+        <span class="logo-spin" aria-hidden="true"></span>
+        <span class="header-tagline block text-[11px] uppercase tracking-[0.18em] text-aqua font-semibold">Clínica Veterinaria</span>
+      </a>
+
+      <nav class="header-nav-desktop hidden lg:flex items-center gap-9 font-medium text-purple-dark">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:+50622620400" class="header-phone-desktop flex items-center gap-2 text-sm font-semibold text-purple-dark hover:text-aqua transition-colors">
+          <i class="ph ph-phone text-lg"></i> 2262-0400
+        </a>
+        <a href="contacto.html#formulario" class="btn-primary rounded-full px-6 py-2.5 text-sm font-semibold">Agendar cita</a>
+      </div>
+
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" class="header-menu-toggle lg:hidden flex h-11 w-11 items-center justify-center rounded-xl bg-purple-light text-purple-dark">
+        <i id="icon-menu-open" class="ph ph-list text-2xl"></i>
+        <i id="icon-menu-close" class="ph ph-x text-2xl hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu lg:hidden border-t border-purple-light bg-white">
+    <nav class="flex flex-col px-6 py-4 gap-1 font-medium text-purple-dark">
+      <a href="index.html" class="nav-link py-2.5 border-b border-purple-light/70">Inicio</a>
+      <a href="servicios.html" class="nav-link py-2.5 border-b border-purple-light/70">Servicios</a>
+      <a href="nosotros.html" class="nav-link py-2.5 border-b border-purple-light/70">Nosotros</a>
+      <a href="contacto.html" class="nav-link py-2.5 border-b border-purple-light/70">Contacto</a>
+      <a href="tel:+50622620400" class="py-2.5 flex items-center gap-2 text-aqua font-semibold"><i class="ph ph-phone"></i> 2262-0400</a>
+      <a href="contacto.html#formulario" class="btn-primary rounded-full px-6 py-3 text-center mt-2">Agendar cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+<!-- ===================== HERO ===================== -->
+<section class="relative bg-purple-light">
+  <div class="relative h-[560px] sm:h-[620px] lg:h-[680px] w-full overflow-hidden">
+    <!-- REEMPLAZAR con foto real de una mascota atendida en la clínica -->
+    <img src="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Perrito siendo atendido con cariño en la Clínica Veterinaria Mr. Patitas" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+    <div class="absolute inset-0 bg-gradient-to-r from-purple-dark/90 via-purple-dark/55 to-purple-dark/10"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-purple-dark/70 via-transparent to-transparent"></div>
+
+    <div class="relative h-full max-w-7xl mx-auto px-5 sm:px-8 flex items-center">
+      <div class="max-w-xl" data-aos="fade-up">
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.08] text-white">
+          Cuidamos a tu mejor amigo <span class="text-gradient">como familia</span>
+        </h1>
+        <p class="mt-6 text-lg text-white/85 max-w-lg">
+          En Barva de Heredia, brindamos atención veterinaria rápida, cercana y profesional: desde una consulta de rutina hasta emergencias, tu mascota está en buenas manos.
+        </p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <a href="contacto.html#formulario" class="btn-primary rounded-full px-8 py-3.5 font-semibold inline-flex items-center gap-2">
+            <i class="ph ph-calendar-check text-xl"></i> Agendar cita
+          </a>
+          <a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="rounded-full bg-white/10 backdrop-blur-sm border border-white/40 text-white px-8 py-3.5 font-semibold inline-flex items-center gap-2 hover:bg-white/20 transition-colors">
+            <i class="ph ph-whatsapp-logo text-xl"></i> Escribir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="float-anim absolute right-4 sm:right-10 top-24 sm:top-28 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow flex items-center gap-2 sm:gap-3">
+      <span class="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-aqua-light text-aqua"><i class="ph-fill ph-first-aid-kit text-base sm:text-xl"></i></span>
+      <div class="text-left">
+        <p class="text-sm font-semibold text-purple-dark">Emergencias</p>
+        <p class="text-xs text-purple-dark/60">Atención prioritaria</p>
+      </div>
+    </div>
+
+    <div class="float-anim-delay absolute right-4 sm:right-10 top-40 sm:top-48 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow flex items-center gap-2 sm:gap-3">
+      <span class="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-purple-light text-purple-medium"><i class="ph-fill ph-map-pin text-base sm:text-xl"></i></span>
+      <div class="text-left">
+        <p class="text-sm font-semibold text-purple-dark">Barva, Heredia</p>
+        <p class="text-xs text-purple-dark/60">Ubicación céntrica</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative max-w-7xl mx-auto px-5 sm:px-8 -mt-10 sm:-mt-12 pb-16 sm:pb-20" data-aos="fade-up" data-aos-delay="200">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="flex items-start gap-3 rounded-2xl bg-white px-5 py-4 shadow-md">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-aqua-light text-aqua text-xl"><i class="ph-fill ph-clock"></i></span>
+        <div>
+          <p class="font-display text-sm font-semibold text-purple-dark">Horario</p>
+          <p class="text-xs text-purple-dark/60 mt-0.5">Lunes a sábado, 8:00 a.m. – 10:00 p.m.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 rounded-2xl bg-white px-5 py-4 shadow-md">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-light text-purple-medium text-xl"><i class="ph-fill ph-first-aid-kit"></i></span>
+        <div>
+          <p class="font-display text-sm font-semibold text-purple-dark">Emergencias</p>
+          <p class="text-xs text-purple-dark/60 mt-0.5">Atención prioritaria todos los días.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 rounded-2xl bg-white px-5 py-4 shadow-md">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-aqua-light text-aqua text-xl"><i class="ph-fill ph-map-pin"></i></span>
+        <div>
+          <p class="font-display text-sm font-semibold text-purple-dark">Ubicación</p>
+          <p class="text-xs text-purple-dark/60 mt-0.5">125 m sur de la iglesia de Barva, Heredia.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3 rounded-2xl bg-white px-5 py-4 shadow-md">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-purple-light text-purple-medium text-xl"><i class="ph-fill ph-whatsapp-logo"></i></span>
+        <div>
+          <p class="font-display text-sm font-semibold text-purple-dark">WhatsApp</p>
+          <p class="text-xs text-purple-dark/60 mt-0.5">Escribinos y te respondemos rápido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICIOS DESTACADOS ===================== -->
+<section class="py-24 relative">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Nuestros servicios</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Todo lo que tu mascota necesita, en un solo lugar</h2>
+      <p class="mt-4 text-purple-dark/70">Un equipo listo para acompañarte en cada etapa del cuidado de tu compañero.</p>
+      <img src="assets/porque-elegirnos.jpg" alt="Mr. Patitas Clínica Veterinaria — clínica, hotel, laboratorio y peluquería" class="mx-auto mt-10 w-full max-w-xs rounded-3xl shadow-2xl" loading="lazy" data-aos="zoom-in" data-aos-delay="200">
+    </div>
+
+    <!-- Fotos de fondo del reverso de cada tarjeta: mismas de servicios.html (REEMPLAZAR con fotos reales cuando estén disponibles) -->
+    <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+      <div class="flip-card" data-aos="fade-up" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua text-2xl mb-5"><i class="ph-fill ph-stethoscope"></i></span>
+            <h3 class="font-display text-xl font-semibold">Consulta general</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(15,110,86,.82), rgba(15,110,86,.82)), url('https://images.unsplash.com/photo-1770836037949-c5e8db65aa86?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-stethoscope text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Revisiones, vacunación y medicina preventiva para que tu mascota esté siempre sana.</p>
+            <a href="servicios.html#consulta" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card is-purple" data-aos="fade-up" data-aos-delay="100" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-light text-purple-medium text-2xl mb-5"><i class="ph-fill ph-syringe"></i></span>
+            <h3 class="font-display text-xl font-semibold">Cirugías</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(83,74,183,.82), rgba(83,74,183,.82)), url('https://images.unsplash.com/photo-1551076805-e1869033e561?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-syringe text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Incluye castraciones con anestesia inhalatoria y protocolo de antibióticos.</p>
+            <a href="servicios.html#cirugias" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua text-2xl mb-5"><i class="ph-fill ph-flask"></i></span>
+            <h3 class="font-display text-xl font-semibold">Laboratorio</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(15,110,86,.82), rgba(15,110,86,.82)), url('https://images.unsplash.com/photo-1639772823849-6efbd173043c?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-flask text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Toma de muestras cuidadosa y resultados confiables para un diagnóstico certero.</p>
+            <a href="servicios.html#laboratorio" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card is-purple" data-aos="fade-up" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-light text-purple-medium text-2xl mb-5"><i class="ph-fill ph-pill"></i></span>
+            <h3 class="font-display text-xl font-semibold">Farmacia veterinaria</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(83,74,183,.82), rgba(83,74,183,.82)), url('https://images.unsplash.com/photo-1580281657529-557a6abb6387?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-pill text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Medicamentos y tratamientos recetados, disponibles en el mismo lugar.</p>
+            <a href="servicios.html#farmacia" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" data-aos="fade-up" data-aos-delay="100" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua text-2xl mb-5"><i class="ph-fill ph-scissors"></i></span>
+            <h3 class="font-display text-xl font-semibold">Grooming</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(15,110,86,.82), rgba(15,110,86,.82)), url('https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-scissors text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Baño, corte y estética para que tu mascota luzca y se sienta increíble.</p>
+            <a href="servicios.html#grooming" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card is-purple" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-light text-purple-medium text-2xl mb-5"><i class="ph-fill ph-house-line"></i></span>
+            <h3 class="font-display text-xl font-semibold">Hospedaje</h3>
+          </div>
+          <div class="flip-card-back" style="background-image: linear-gradient(rgba(83,74,183,.82), rgba(83,74,183,.82)), url('https://images.unsplash.com/photo-1743763959056-41bbb557272d?w=500&h=400&q=70&auto=format&fit=crop');">
+            <i class="ph-fill ph-house-line text-2xl mb-3"></i>
+            <p class="text-sm text-white/90">Un espacio seguro y cómodo para tu mascota cuando salgas de viaje.</p>
+            <a href="servicios.html#hospedaje" class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-white underline underline-offset-2 hover:no-underline">Más información <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12" data-aos="fade-up">
+      <a href="servicios.html" class="btn-outline rounded-full px-8 py-3.5 font-semibold inline-flex items-center gap-2">
+        Ver todos los servicios <i class="ph ph-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
+<section class="py-24 bg-purple-dark text-white paw-pattern relative overflow-hidden">
+  <div class="absolute top-10 right-10 h-72 w-72 bg-aqua-medium/20 blob blob-blur"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-right">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua-medium">Por qué elegirnos</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Rapidez, experiencia y calidez de barrio</h2>
+      <p class="mt-4 text-white/70">Somos parte de la comunidad de Barva y eso se nota en cada visita: te conocemos, conocemos a tu mascota y actuamos rápido cuando más lo necesitás.</p>
+
+      <div class="mt-10 grid sm:grid-cols-2 gap-6">
+        <div class="flex gap-4">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua-medium text-xl"><i class="ph-fill ph-lightning"></i></span>
+          <div>
+            <h3 class="font-semibold">Emergencias primero</h3>
+            <p class="text-sm text-white/60 mt-1">Priorizamos casos urgentes con atención inmediata.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua-medium text-xl"><i class="ph-fill ph-users-three"></i></span>
+          <div>
+            <h3 class="font-semibold">Equipo experimentado</h3>
+            <p class="text-sm text-white/60 mt-1">Personal cuidadoso, eficiente y capacitado.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua-medium text-xl"><i class="ph-fill ph-map-pin"></i></span>
+          <div>
+            <h3 class="font-semibold">Ubicación céntrica</h3>
+            <p class="text-sm text-white/60 mt-1">A pasos de la iglesia católica de Barva.</p>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/10 text-aqua-medium text-xl"><i class="ph-fill ph-heart"></i></span>
+          <div>
+            <h3 class="font-semibold">Trato de familia</h3>
+            <p class="text-sm text-white/60 mt-1">Tratamos a cada mascota como si fuera nuestra.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative" data-aos="fade-left">
+      <div class="overflow-hidden rounded-3xl shadow-2xl max-w-sm mx-auto">
+        <img src="assets/servicios-collage.jpg" alt="Mr. Patitas: Pet Shop, Clínica Veterinaria, Grooming y Guardería" class="w-full h-auto object-contain" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIOS ===================== -->
+<section class="py-24 bg-aqua-light relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Lo que dicen en Barva</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Familias que confían en nosotros</h2>
+      <p class="mt-4 text-purple-dark/70">Reseñas reales de Google de nuestros clientes.</p>
+    </div>
+
+    <div class="testimonial-columns mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-track" style="--tt-duration:26s;">
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"He visitado varias clínicas en Barva y puedo decir esta es la mejor. Desde que llamé para agendar una cita me atendieron con muchísima amabilidad y me dieron prioridad por ser una emergencia."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Jennifer Castro García</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Buen trabajo, buenos precios y excelente servicio, como siempre."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Gerardo Quesada Alvarado</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y gran atención."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Fabián Rojas</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <!-- Duplicado para loop continuo -->
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"He visitado varias clínicas en Barva y puedo decir esta es la mejor. Desde que llamé para agendar una cita me atendieron con muchísima amabilidad y me dieron prioridad por ser una emergencia."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Jennifer Castro García</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Buen trabajo, buenos precios y excelente servicio, como siempre."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Gerardo Quesada Alvarado</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y gran atención."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Fabián Rojas</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-track" style="--tt-duration:32s;">
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Siempre atienden super bien. He llevado a mi perro y 7 gatas, ninguna queja, continuaré llevándolos con ellos."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Ignacio Sandi</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y muy buena atención. Variedad de productos y alimentos para mascotas."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Kris Arguedas</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente atención, precios y calidad de productos y servicios."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Johnny Castro Alvarado</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <!-- Duplicado para loop continuo -->
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Siempre atienden super bien. He llevado a mi perro y 7 gatas, ninguna queja, continuaré llevándolos con ellos."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Ignacio Sandi</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y muy buena atención. Variedad de productos y alimentos para mascotas."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Kris Arguedas</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente atención, precios y calidad de productos y servicios."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Johnny Castro Alvarado</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-track hidden lg:flex" style="--tt-duration:29s;">
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"El mejor servicio y atención de la zona, te hacen sentir de la familia."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">AD DA</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Sinceramente son muy buenas personas los dueños. Los recomiendo al 100%."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Yojan Arley</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y productos de calidad."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Bernal Mont</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <!-- Duplicado para loop continuo -->
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"El mejor servicio y atención de la zona, te hacen sentir de la familia."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">AD DA</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Sinceramente son muy buenas personas los dueños. Los recomiendo al 100%."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Yojan Arley</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+        <div class="testimonial-card" aria-hidden="true">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y productos de calidad."</p>
+          <div class="mt-4 pt-4 border-t border-purple-light">
+            <span class="stars text-sm">★★★★★</span>
+            <p class="font-display text-sm font-semibold text-purple-dark mt-1">Bernal Mont</p>
+            <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 text-center" data-aos="fade-up">
+      <span class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 badge-glow">
+        <span class="stars text-sm">★★★★★</span>
+        <span class="text-sm font-semibold text-purple-dark">4.6 de calificación con 69 reseñas en Google</span>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MAPA ===================== -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-10 items-center">
+    <div data-aos="fade-right">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Visítanos</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Estamos en el corazón de Barva</h2>
+      <p class="mt-4 text-purple-dark/70">125 metros sur de la iglesia católica de Barva, Heredia (C/ Rothe, San Pablo).</p>
+      <div class="mt-8 space-y-4">
+        <div class="flex items-start gap-3">
+          <i class="ph-fill ph-map-pin text-xl text-aqua mt-0.5"></i>
+          <p class="text-sm text-purple-dark/80">125 m sur de la iglesia católica de Barva, Heredia, Costa Rica</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="ph-fill ph-clock text-xl text-aqua mt-0.5"></i>
+          <!-- Horario a confirmar con el cliente -->
+          <p class="text-sm text-purple-dark/80">Lunes a sábado, 8:00 a.m. – 10:00 p.m.</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <i class="ph-fill ph-phone text-xl text-aqua mt-0.5"></i>
+          <p class="text-sm text-purple-dark/80">2262-0400</p>
+        </div>
+      </div>
+      <a href="contacto.html" class="btn-skew mt-8">
+        Cómo llegar <i class="ph ph-arrow-right"></i>
+      </a>
+    </div>
+    <div class="rounded-3xl overflow-hidden shadow-xl border-4 border-white" data-aos="fade-left">
+      <iframe
+        title="Ubicación Clínica Veterinaria Mr. Patitas en Barva, Heredia"
+        src="https://www.google.com/maps?q=Cl%C3%ADnica%20Veterinaria%20Mr.%20Patitas%2C%20Barva%2C%20Heredia%2C%20Costa%20Rica&output=embed"
+        width="100%" height="420" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="pb-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="relative overflow-hidden rounded-[2.5rem] bg-aqua text-white px-8 py-16 text-center paw-pattern" data-aos="zoom-in">
+      <div class="absolute -bottom-10 -left-10 h-56 w-56 bg-white/10 blob blob-blur"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold relative">¿Tu mascota necesita atención?</h2>
+      <p class="mt-4 text-white/85 max-w-xl mx-auto relative">Agenda tu cita hoy mismo o escríbenos por WhatsApp para atención inmediata.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4 relative">
+        <a href="contacto.html#formulario" class="rounded-full bg-white text-aqua-dark px-8 py-3.5 font-semibold hover:bg-purple-light transition-colors">Agendar cita</a>
+        <a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="rounded-full border-2 border-white px-8 py-3.5 font-semibold hover:bg-white/10 transition-colors">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-purple-dark text-white paw-pattern relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <a href="index.html" class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center rounded-xl bg-white p-1"><img src="assets/logo-mr-patitas.jpg" alt="Mr. Patitas Clínica Veterinaria" class="h-9 w-9 object-contain"></span>
+        <span class="font-display text-lg font-semibold">Mr. Patitas</span>
+      </a>
+      <p class="text-sm text-white/60">Cuidamos a tu mejor amigo como familia, en el corazón de Barva, Heredia.</p>
+      <div class="flex gap-3 mt-5">
+        <a href="https://www.facebook.com/ClinicaveterinariaMr.Patitas" target="_blank" rel="noopener" class="social-btn social-btn--facebook" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+        <a href="https://www.instagram.com/clinica_veterinaria_mr.patitas/" target="_blank" rel="noopener" class="social-btn social-btn--instagram" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+        <a href="https://wa.me/50622620400" target="_blank" rel="noopener" class="social-btn social-btn--whatsapp" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Navegación</h3>
+      <ul class="space-y-2.5 text-sm text-white/60">
+        <li><a href="index.html" class="hover:text-aqua-medium transition-colors">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-aqua-medium transition-colors">Servicios</a></li>
+        <li><a href="nosotros.html" class="hover:text-aqua-medium transition-colors">Nosotros</a></li>
+        <li><a href="contacto.html" class="hover:text-aqua-medium transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Servicios</h3>
+      <ul class="space-y-2.5 text-sm text-white/60">
+        <li><a href="servicios.html#consulta" class="hover:text-aqua-medium transition-colors">Consulta general</a></li>
+        <li><a href="servicios.html#cirugias" class="hover:text-aqua-medium transition-colors">Cirugías</a></li>
+        <li><a href="servicios.html#laboratorio" class="hover:text-aqua-medium transition-colors">Laboratorio</a></li>
+        <li><a href="servicios.html#grooming" class="hover:text-aqua-medium transition-colors">Grooming</a></li>
+        <li><a href="servicios.html#hospedaje" class="hover:text-aqua-medium transition-colors">Hospedaje</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Contacto</h3>
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="flex gap-2"><i class="ph-fill ph-map-pin mt-0.5"></i> 125 m sur de la iglesia católica de Barva, Heredia</li>
+        <li class="flex gap-2"><i class="ph-fill ph-phone mt-0.5"></i> 2262-0400</li>
+        <li class="flex gap-2"><i class="ph-fill ph-clock mt-0.5"></i> Lun–Sáb, 8:00 a.m.–10:00 p.m.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-sm text-white/50">
+    © <span id="current-year"></span> Clínica Veterinaria Mr. Patitas. Todos los derechos reservados.
+  </div>
+</footer>
+
+<!-- ===================== WHATSAPP FLOTANTE ===================== -->
+<a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" class="whatsapp-float fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-aqua text-white shadow-2xl hover:bg-aqua-medium transition-colors">
+  <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

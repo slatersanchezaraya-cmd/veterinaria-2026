@@ -1,0 +1,827 @@
+/* Clínica Veterinaria Mr. Patitas — estilos propios
+   Complementa Tailwind (utilidades) con identidad de marca: blobs, huellas,
+   micro-interacciones y animaciones que Tailwind no cubre por defecto. */
+
+:root {
+  --purple-dark: #26215C;
+  --purple: #3C3489;
+  --purple-medium: #534AB7;
+  --purple-light: #EEEDFE;
+  --aqua-dark: #085041;
+  --aqua: #0F6E56;
+  --aqua-medium: #1D9E75;
+  --aqua-light: #E1F5EE;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--purple-dark);
+  background-color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: "Fredoka", sans-serif;
+}
+
+/* Ancla con offset por el header fijo */
+[id] {
+  scroll-margin-top: 6.5rem;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--purple-light); }
+::-webkit-scrollbar-thumb { background: var(--aqua-medium); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--aqua); }
+
+/* ---------- Patrón de huellitas (marca de agua sutil) ---------- */
+.paw-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.06'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+.paw-pattern-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%2326215C' fill-opacity='0.05'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 120px 120px;
+}
+
+/* ---------- Blobs orgánicos ---------- */
+.blob {
+  border-radius: 63% 37% 54% 46% / 45% 41% 59% 55%;
+  animation: blobMorph 12s ease-in-out infinite;
+}
+
+@keyframes blobMorph {
+  0%, 100% { border-radius: 63% 37% 54% 46% / 45% 41% 59% 55%; }
+  33% { border-radius: 42% 58% 68% 32% / 55% 38% 62% 45%; }
+  66% { border-radius: 55% 45% 38% 62% / 33% 62% 38% 67%; }
+}
+
+.blob-blur {
+  filter: blur(60px);
+}
+
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+.float-anim { animation: floatY 5s ease-in-out infinite; }
+.float-anim-slow { animation: floatY 7s ease-in-out infinite; }
+.float-anim-delay { animation: floatY 6s ease-in-out infinite; animation-delay: 1.2s; }
+
+/* ---------- Botón flotante de WhatsApp ---------- */
+.whatsapp-float {
+  animation: pulseRing 2.6s ease-out infinite;
+}
+@keyframes pulseRing {
+  0% { box-shadow: 0 0 0 0 rgba(15, 110, 86, 0.55); }
+  70% { box-shadow: 0 0 0 16px rgba(15, 110, 86, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(15, 110, 86, 0); }
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* ---------- Header transparente sobre la foto del hero (solo index.html):
+   arriba del todo no tiene fondo y el texto es blanco para leerse sobre la
+   foto oscurecida; al hacer scroll (.is-scrolled) pasa a fondo blanco sólido
+   con los colores normales del sitio. ---------- */
+.site-header.hero-transparent {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+.site-header.hero-transparent .header-tagline {
+  color: #fff;
+}
+.site-header.hero-transparent .header-nav-desktop .nav-link,
+.site-header.hero-transparent .header-phone-desktop {
+  color: #fff;
+}
+.site-header.hero-transparent .header-menu-toggle {
+  background-color: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+.site-header.hero-transparent.is-scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 24px -12px rgba(38, 33, 92, 0.25);
+}
+.site-header.hero-transparent.is-scrolled .header-tagline {
+  color: var(--aqua);
+}
+.site-header.hero-transparent.is-scrolled .header-nav-desktop .nav-link,
+.site-header.hero-transparent.is-scrolled .header-phone-desktop {
+  color: var(--purple-dark);
+}
+.site-header.hero-transparent.is-scrolled .header-menu-toggle {
+  background-color: var(--purple-light);
+  color: var(--purple-dark);
+}
+
+/* ---------- Logo del header: badge circular (assets/logo-mr-patitas.jpg)
+   que gira 360° al pasar el mouse. ---------- */
+.logo-spin {
+  display: inline-flex;
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-image: url('../assets/logo-mr-patitas.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+.group:hover .logo-spin,
+.group:focus-visible .logo-spin {
+  transform: rotate(360deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-spin { transition: none !important; transform: none !important; }
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--aqua-medium);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ---------- Tarjetas de servicio ---------- */
+.service-card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 45px -18px rgba(38, 33, 92, 0.35);
+  border-color: var(--aqua-medium);
+}
+.service-card .icon-wrap {
+  transition: transform 0.35s ease, background-color 0.35s ease;
+}
+.service-card:hover .icon-wrap {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+/* ---------- Texto degradado ---------- */
+.text-gradient {
+  background: linear-gradient(100deg, var(--aqua-medium), var(--purple-medium));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Botones ---------- */
+.btn-primary {
+  background-color: var(--aqua);
+  color: #fff;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 25px -10px rgba(15, 110, 86, 0.55);
+}
+.btn-primary:hover {
+  background-color: var(--aqua-medium);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 2px solid var(--purple-light);
+  color: var(--purple-dark);
+  transition: all 0.25s ease;
+}
+.btn-outline:hover {
+  border-color: var(--aqua-medium);
+  color: var(--aqua-dark);
+  background-color: var(--aqua-light);
+}
+
+/* ---------- Inputs de formulario ---------- */
+.form-input {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-input:focus {
+  outline: none;
+  border-color: var(--aqua-medium);
+  box-shadow: 0 0 0 4px rgba(29, 158, 117, 0.15);
+}
+
+/* ---------- Marquee de logos/reseñas (opcional scroll infinito) ---------- */
+.marquee-track {
+  animation: marqueeScroll 30s linear infinite;
+}
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ---------- Estrellas ---------- */
+.stars {
+  color: #F5B301;
+  letter-spacing: 2px;
+}
+
+/* ---------- Utilidad: aparición base para AOS fallback ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .blob, .float-anim, .float-anim-slow, .float-anim-delay, .whatsapp-float, .marquee-track {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Calendario de fecha preferida (formulario de contacto) ---------- */
+.cal-day {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: var(--purple-dark);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.cal-day:hover:not(:disabled) {
+  background-color: var(--purple-light);
+}
+.cal-day:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+.cal-day.is-selected {
+  background-color: var(--aqua);
+  color: #fff;
+}
+.cal-day.is-selected:hover {
+  background-color: var(--aqua);
+}
+
+/* ---------- Revelado al hacer scroll (no depende de AOS/CDN) ----------
+   Usado en el listado de servicios: si AOS no carga (sin internet, CDN
+   caído), estas tarjetas igual aparecen deslizándose gracias a
+   IntersectionObserver puro (ver js/main.js → initScrollReveal). */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+[data-reveal="right"] { transform: translateX(-40px); }
+[data-reveal="left"] { transform: translateX(40px); }
+[data-reveal="up"] { transform: translateY(30px); }
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Menú móvil ---------- */
+.mobile-menu {
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.mobile-menu.open {
+  max-height: 32rem;
+  opacity: 1;
+}
+
+/* ---------- Divisor orgánico entre secciones ---------- */
+.section-curve {
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+
+/* ---------- Chip / badge ---------- */
+.badge-glow {
+  box-shadow: 0 12px 30px -12px rgba(38, 33, 92, 0.45);
+}
+
+/* ---------- Accesibilidad: salto de foco y estados de teclado ---------- */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 200;
+  background: var(--aqua);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--aqua-medium);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Hero "scroll to expand" (Nosotros) ---------- */
+#scroll-expand-wrap {
+  height: 250vh;
+}
+#se-media {
+  width: 320px;
+  height: 400px;
+  will-change: width, height;
+}
+#se-word1,
+#se-word2 {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ---------- Pila de fotos estilo polaroid (equipo/instalaciones) ---------- */
+.photo-stack {
+  max-width: 320px;
+  margin: 0 auto;
+  transition: transform 0.25s ease;
+}
+.photo-stack:hover {
+  transform: rotate(4deg);
+}
+.photo-stack:hover .photo-stack-card::before {
+  transform: translateY(-3%) rotate(-5deg);
+}
+.photo-stack:hover .photo-stack-card::after {
+  transform: translateY(3%) rotate(5deg);
+}
+.photo-stack-card {
+  position: relative;
+  border: 4px solid var(--purple-dark);
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 18px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.photo-stack-card::before,
+.photo-stack-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 4px solid var(--purple-dark);
+  background-color: #fff;
+  border-radius: 18px;
+  z-index: -1;
+  transition: transform 0.2s ease;
+}
+.photo-stack-card::before { transform: translateY(-2%) rotate(-6deg); }
+.photo-stack-card::after { transform: translateY(2%) rotate(6deg); }
+.photo-stack-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-stack, .photo-stack-card, .photo-stack-card::before, .photo-stack-card::after {
+    transition: none !important;
+  }
+}
+
+/* ---------- Botones de redes sociales (adaptado de Uiverse.io by vinodjangid07) ---------- */
+.social-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 1.15rem;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+.social-btn:active {
+  transform: scale(0.9);
+}
+.social-btn--facebook:hover {
+  background-color: #0866ff;
+}
+.social-btn--instagram:hover {
+  background-color: #d62976;
+}
+.social-btn--whatsapp:hover {
+  background-color: #25d366;
+}
+.social-btn:hover i {
+  animation: socialSlideIn 0.3s both;
+}
+@keyframes socialSlideIn {
+  0% { transform: translateY(-14px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .social-btn:hover i { animation: none !important; }
+}
+
+/* ---------- Tarjetas flip de servicio (adaptado de Uiverse.io by suleymanlaarabidev) ---------- */
+.flip-card {
+  perspective: 1200px;
+  height: 260px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flip-card-front {
+  position: relative;
+  overflow: hidden;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%2326215C' fill-opacity='0.05'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(160deg, #ffffff 0%, var(--aqua-light) 165%);
+  background-size: 120px 120px, cover;
+  background-repeat: repeat, no-repeat;
+  border: 2px solid var(--aqua-light);
+  box-shadow: 0 12px 26px -16px rgba(38, 33, 92, 0.3);
+}
+.flip-card.is-purple .flip-card-front {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%2326215C' fill-opacity='0.05'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(160deg, #ffffff 0%, var(--purple-light) 165%);
+  background-size: 120px 120px, cover;
+  background-repeat: repeat, no-repeat;
+  border-color: var(--purple-light);
+}
+.flip-card-back {
+  background-color: var(--aqua);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transform: rotateY(180deg);
+}
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .flip-card-inner { transition: none; }
+}
+
+/* ---------- Menú "glass" en abanico (adaptado de Uiverse.io by codebykay101) ---------- */
+.glass-fan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.glass-fan-item {
+  position: relative;
+  width: 92px;
+  height: 100px;
+  background: linear-gradient(rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 18px 25px rgba(8, 6, 30, 0.25);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 -18px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+  transform: rotate(calc(var(--r, 0) * 1deg));
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+}
+.glass-fan:hover .glass-fan-item {
+  transform: rotate(0deg);
+  margin: 0 6px;
+}
+.glass-fan-item i {
+  font-size: 1.4rem;
+  color: var(--aqua-medium);
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-fan-item { transition: none; }
+}
+/* En touch no existe :hover, así que el abanico nunca se despliega:
+   mostrarlo ya separado y sin rotación por defecto. */
+@media (hover: none), (max-width: 640px) {
+  .glass-fan {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .glass-fan-item {
+    width: 76px;
+    height: 88px;
+    font-size: 0.65rem;
+    transform: rotate(0deg) !important;
+    margin: 0 5px !important;
+  }
+}
+
+/* ---------- Tarjetas "libro" del equipo (adaptado de Uiverse.io by eslam-hany) ---------- */
+.team-book {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: 340px;
+  margin: 0 auto;
+  perspective: 1600px;
+}
+.team-book-content {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: var(--aqua);
+  color: #fff;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+.team-book-content .label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.35rem;
+}
+.team-book-cover {
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: transform 0.6s ease;
+  transform-origin: left center;
+  box-shadow: 0 18px 35px -15px rgba(38, 33, 92, 0.45);
+}
+.team-book:hover .team-book-cover,
+.team-book.open .team-book-cover,
+.team-book:focus-within .team-book-cover {
+  transform: rotateY(-110deg);
+}
+.team-book-cover img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  display: block;
+}
+.team-book-cover .team-book-info {
+  padding: 1rem 1.1rem;
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-book-cover { transition: none; }
+}
+
+
+/* ---------- Reseñas: pila animada por scroll ----------
+   Sin JS (o con "movimiento reducido") las tarjetas se muestran en una
+   grilla estática de 3 columnas para que el contenido nunca dependa del
+   script. Solo cuando initReviewStack() confirma que puede animar se
+   agrega .js-enhanced y las tarjetas pasan a apilarse con position:absolute
+   dentro de un contenedor "sticky", con el desplazamiento del scroll
+   controlando su translateY/rotate (mismo mecanismo que .scroll-expand,
+   sin recurrir a una librería de animación). */
+.review-stack-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+  max-width: 72rem;
+  padding: 0 1.25rem;
+}
+.review-stack-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.75rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-image:
+    radial-gradient(9rem 9rem at -10% 112%, rgba(255, 255, 255, 0.4), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.07'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(155deg, var(--aqua) 0%, var(--aqua-dark) 100%);
+  background-size: auto, 120px 120px, cover;
+  background-repeat: no-repeat, repeat, no-repeat;
+  padding: 2.1rem 1.75rem 1.75rem;
+  box-shadow: 0 24px 46px -18px rgba(8, 80, 65, 0.55);
+  min-height: 230px;
+}
+.review-stack-card.is-purple {
+  background-image:
+    radial-gradient(9rem 9rem at -10% 112%, rgba(255, 255, 255, 0.4), transparent 70%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.07'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(155deg, var(--purple-medium) 0%, var(--purple-dark) 100%);
+  background-size: auto, 120px 120px, cover;
+  background-repeat: no-repeat, repeat, no-repeat;
+  box-shadow: 0 24px 46px -18px rgba(38, 33, 92, 0.55);
+}
+/* Comillas gigantes translúcidas detrás del texto. Va en ::before para
+   pintarse siempre detrás del contenido real, sin necesitar z-index. */
+.review-stack-card::before {
+  content: "\201D";
+  position: absolute;
+  top: -1.9rem;
+  right: 0.6rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.18);
+  pointer-events: none;
+}
+.review-stack-card .review-quote {
+  font-style: italic;
+  line-height: 1.5;
+}
+.review-stack-card .review-rating-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+}
+
+.review-stack-wrap.js-enhanced {
+  position: relative;
+  height: 300vh;
+}
+.review-stack-wrap.js-enhanced .review-stack-sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.review-stack-wrap.js-enhanced .review-stack-cards {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 28rem;
+  height: 460px;
+  padding: 0;
+}
+.review-stack-wrap.js-enhanced .review-stack-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+@media (max-width: 640px) {
+  .review-stack-wrap.js-enhanced .review-stack-cards {
+    max-width: 21rem;
+    height: 420px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .review-stack-wrap.js-enhanced {
+    height: auto !important;
+  }
+  .review-stack-wrap.js-enhanced .review-stack-sticky {
+    position: static !important;
+    height: auto !important;
+  }
+  .review-stack-wrap.js-enhanced .review-stack-cards {
+    position: static !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 72rem;
+    height: auto !important;
+    padding: 0 1.25rem;
+  }
+  .review-stack-wrap.js-enhanced .review-stack-card {
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Columnas de reseñas con scroll continuo (inicio) ---------- */
+.testimonial-columns {
+  max-height: 640px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+.testimonial-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: testimonialScroll var(--tt-duration, 26s) linear infinite;
+}
+.testimonial-columns:hover .testimonial-track {
+  animation-play-state: paused;
+}
+@keyframes testimonialScroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(38, 33, 92, 0.08);
+}
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-track { animation: none; }
+}
+
+/* ---------- Botón con barrido diagonal (adaptado de Uiverse.io by nikk7007) ---------- */
+.btn-skew {
+  --color: var(--aqua);
+  --color2: var(--purple-dark);
+  padding: 0.85em 2em;
+  background-color: transparent;
+  border-radius: 999px;
+  border: 2px solid var(--color);
+  transition: color 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-skew::after,
+.btn-skew::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  background-color: var(--color);
+}
+.btn-skew::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+.btn-skew:hover::before { transform: skew(45deg) rotate(180deg) translate(-50%, -50%); }
+.btn-skew:hover::after { transform: skew(45deg) translate(-50%, -50%); }
+.btn-skew:hover { color: var(--color2); }
+.btn-skew:active { filter: brightness(0.9); transform: scale(0.98); }
+@media (prefers-reduced-motion: reduce) {
+  .btn-skew, .btn-skew::before, .btn-skew::after { transition: none; }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página no encontrada | Clínica Veterinaria Mr. Patitas</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#26215C">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          purple: { dark: '#26215C', DEFAULT: '#3C3489', medium: '#534AB7', light: '#EEEDFE' },
+          aqua: { dark: '#085041', DEFAULT: '#0F6E56', medium: '#1D9E75', light: '#E1F5EE' },
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-purple-light text-purple-dark font-sans">
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<main id="main-content" class="relative min-h-screen flex items-center justify-center overflow-hidden px-5 py-20">
+  <div class="absolute -top-16 -left-16 h-72 w-72 bg-aqua-light blob blob-blur opacity-70"></div>
+  <div class="absolute bottom-0 right-0 h-96 w-96 bg-purple-medium/20 blob blob-blur"></div>
+
+  <div class="relative text-center max-w-lg">
+    <span class="flex h-20 w-20 items-center justify-center rounded-3xl bg-purple-dark text-aqua-medium shadow-md mx-auto mb-8 float-anim">
+      <i class="ph-fill ph-paw-print text-4xl"></i>
+    </span>
+    <p class="font-display text-7xl font-semibold text-purple-dark">404</p>
+    <h1 class="font-display text-2xl sm:text-3xl font-semibold mt-4">Esta huella no lleva a ningún lado</h1>
+    <p class="mt-4 text-purple-dark/70">La página que buscás no existe o cambió de dirección. Volvamos a un lugar conocido.</p>
+
+    <div class="mt-9 flex flex-wrap justify-center gap-4">
+      <a href="index.html" class="btn-primary rounded-full px-8 py-3.5 font-semibold inline-flex items-center gap-2">
+        <i class="ph ph-house-line text-xl"></i> Ir al inicio
+      </a>
+      <a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="btn-outline bg-white rounded-full px-8 py-3.5 font-semibold inline-flex items-center gap-2">
+        <i class="ph ph-whatsapp-logo text-xl text-aqua"></i> Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</main>
+
+<a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" class="whatsapp-float fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-aqua text-white shadow-2xl hover:bg-aqua-medium transition-colors">
+  <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+</a>
+
+<script src="js/analytics.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

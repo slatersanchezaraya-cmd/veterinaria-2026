@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nosotros | Clínica Veterinaria Mr. Patitas — Barva, Heredia</title>
+<meta name="description" content="Conocé a la Clínica Veterinaria Mr. Patitas en Barva, Heredia: nuestra historia, valores y el equipo que cuida a tu mascota como familia.">
+<meta name="theme-color" content="#26215C">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:title" content="Nosotros — Clínica Veterinaria Mr. Patitas">
+<meta property="og:description" content="Historia, valores y equipo de la Clínica Veterinaria Mr. Patitas en Barva, Heredia.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&h=630&q=80&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nosotros — Clínica Veterinaria Mr. Patitas">
+<meta name="twitter:description" content="Historia, valores y equipo de la Clínica Veterinaria Mr. Patitas en Barva, Heredia.">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=1200&h=630&q=80&auto=format&fit=crop">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          purple: { dark: '#26215C', DEFAULT: '#3C3489', medium: '#534AB7', light: '#EEEDFE' },
+          aqua: { dark: '#085041', DEFAULT: '#0F6E56', medium: '#1D9E75', light: '#E1F5EE' },
+        },
+        fontFamily: {
+          display: ['Fredoka', 'sans-serif'],
+          sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-purple-dark font-sans">
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="site-header fixed top-0 inset-x-0 z-50 bg-white/70 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group" aria-label="Mr. Patitas — Ir al inicio">
+        <span class="logo-spin" aria-hidden="true"></span>
+        <span class="block text-[11px] uppercase tracking-[0.18em] text-aqua font-semibold">Clínica Veterinaria</span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-9 font-medium text-purple-dark">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="servicios.html" class="nav-link">Servicios</a>
+        <a href="nosotros.html" class="nav-link">Nosotros</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:+50622620400" class="flex items-center gap-2 text-sm font-semibold text-purple-dark hover:text-aqua transition-colors">
+          <i class="ph ph-phone text-lg"></i> 2262-0400
+        </a>
+        <a href="contacto.html#formulario" class="btn-primary rounded-full px-6 py-2.5 text-sm font-semibold">Agendar cita</a>
+      </div>
+
+      <button id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú" class="lg:hidden flex h-11 w-11 items-center justify-center rounded-xl bg-purple-light text-purple-dark">
+        <i id="icon-menu-open" class="ph ph-list text-2xl"></i>
+        <i id="icon-menu-close" class="ph ph-x text-2xl hidden"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="mobile-menu lg:hidden border-t border-purple-light bg-white">
+    <nav class="flex flex-col px-6 py-4 gap-1 font-medium text-purple-dark">
+      <a href="index.html" class="nav-link py-2.5 border-b border-purple-light/70">Inicio</a>
+      <a href="servicios.html" class="nav-link py-2.5 border-b border-purple-light/70">Servicios</a>
+      <a href="nosotros.html" class="nav-link py-2.5 border-b border-purple-light/70">Nosotros</a>
+      <a href="contacto.html" class="nav-link py-2.5 border-b border-purple-light/70">Contacto</a>
+      <a href="tel:+50622620400" class="py-2.5 flex items-center gap-2 text-aqua font-semibold"><i class="ph ph-phone"></i> 2262-0400</a>
+      <a href="contacto.html#formulario" class="btn-primary rounded-full px-6 py-3 text-center mt-2">Agendar cita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+<!-- ===================== HERO "SCROLL TO EXPAND" ===================== -->
+<!-- Adaptación en JS/CSS vanilla (ver js/main.js → initScrollExpand) de un
+     efecto de imagen que crece con el scroll. No usa scroll-hijacking. -->
+<section id="scroll-expand-wrap" class="relative bg-purple-dark">
+  <div class="sticky top-0 h-screen w-full overflow-hidden flex flex-col items-center justify-center">
+    <div id="se-bg" class="absolute inset-0 transition-opacity duration-100">
+      <img src="assets/fachada-clinica.webp" alt="Instalaciones de la Clínica Veterinaria Mr. Patitas" class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0 bg-purple-dark/70 paw-pattern"></div>
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center px-5 text-center">
+      <div id="se-media" class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+        <!-- REEMPLAZAR con foto real del equipo de Mr. Patitas -->
+        <img src="https://images.unsplash.com/photo-1484863137850-59afcfe05386?w=1000&h=620&q=80&auto=format&fit=crop" alt="Equipo de la Clínica Veterinaria Mr. Patitas" class="w-full h-full object-cover">
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3 font-display text-3xl sm:text-5xl font-semibold text-white">
+        <span id="se-word1">Conocé</span>
+        <span id="se-word2" class="text-gradient">Mr. Patitas</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HISTORIA / MISIÓN ===================== -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div data-aos="fade-right">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Nuestra historia</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Una clínica con corazón de familia</h2>
+      <!-- Contenido editable: reemplazar con la historia real de la clínica que
+           facilite el dueño (año de fundación, motivación, anécdotas, etc.) -->
+      <p class="mt-5 text-purple-dark/70">
+        Nacimos en Barva con un propósito simple: que ninguna mascota de la comunidad se quede sin atención cuando más lo necesita. Desde entonces, hemos acompañado a cientos de familias herediananas en consultas de rutina, cirugías y emergencias, siempre con la misma cercanía del primer día.
+      </p>
+      <p class="mt-4 text-purple-dark/70">
+        Creemos que cuidar a una mascota es cuidar a toda una familia. Por eso combinamos experiencia veterinaria con un trato humano, rápido y honesto, para que cada visita a Mr. Patitas se sienta como llegar a casa.
+      </p>
+      <div class="mt-8 grid grid-cols-2 gap-6 max-w-sm">
+        <div>
+          <p class="font-display text-3xl font-semibold text-aqua"><span data-countup="69">0</span>+</p>
+          <p class="text-xs text-purple-dark/60 mt-1">Familias que nos recomiendan en Google</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl font-semibold text-aqua"><span data-countup="6">0</span></p>
+          <p class="text-xs text-purple-dark/60 mt-1">Días de atención a la semana</p>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <div class="photo-stack">
+        <div class="photo-stack-card">
+          <img src="assets/fachada-clinica.webp" alt="Instalaciones de la Clínica Veterinaria Mr. Patitas" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALORES ===================== -->
+<section class="py-24 bg-purple-light">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Nuestros valores</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Lo que nos mueve cada día</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-3 gap-7">
+      <div class="service-card bg-white rounded-3xl border-2 border-purple-light p-8 text-center" data-aos="fade-up">
+        <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua text-2xl mb-5 mx-auto"><i class="ph-fill ph-heart"></i></span>
+        <h3 class="font-display text-xl font-semibold">Cuidado genuino</h3>
+        <p class="mt-2 text-sm text-purple-dark/70">Tratamos a cada mascota como si fuera nuestra, con paciencia y cariño real.</p>
+      </div>
+      <div class="service-card bg-white rounded-3xl border-2 border-purple-light p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+        <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-light text-purple-medium text-2xl mb-5 mx-auto"><i class="ph-fill ph-lightning"></i></span>
+        <h3 class="font-display text-xl font-semibold">Rapidez</h3>
+        <p class="mt-2 text-sm text-purple-dark/70">Priorizamos emergencias y respondemos rápido cuando cada minuto cuenta.</p>
+      </div>
+      <div class="service-card bg-white rounded-3xl border-2 border-purple-light p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+        <span class="icon-wrap flex h-14 w-14 items-center justify-center rounded-2xl bg-aqua-light text-aqua text-2xl mb-5 mx-auto"><i class="ph-fill ph-users-three"></i></span>
+        <h3 class="font-display text-xl font-semibold">Cercanía con Barva</h3>
+        <p class="mt-2 text-sm text-purple-dark/70">Somos parte de la comunidad y construimos relaciones de confianza a largo plazo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EQUIPO ===================== -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Nuestro equipo</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">Las manos que cuidan a tu mascota</h2>
+      <!-- Reemplazar con fotos, nombres y funciones reales del equipo -->
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div class="team-book" tabindex="0" data-aos="fade-up">
+        <div class="team-book-content">
+          <i class="ph-fill ph-stethoscope text-2xl mb-3"></i>
+          <p class="label">Se encarga de</p>
+          <p class="text-sm">Consultas generales, diagnósticos, cirugías y castraciones, y de definir el plan de tratamiento de cada paciente.</p>
+        </div>
+        <div class="team-book-cover">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=500&h=500&q=80&auto=format&fit=crop" alt="Miembro del equipo veterinario" loading="lazy">
+          <div class="team-book-info">
+            <h3 class="font-display text-lg font-semibold">Médico Veterinario</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-book" tabindex="0" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-book-content">
+          <i class="ph-fill ph-flask text-2xl mb-3"></i>
+          <p class="label">Se encarga de</p>
+          <p class="text-sm">Toma de muestras de laboratorio, preparación de pacientes para consulta o cirugía, y seguimiento de tratamientos.</p>
+        </div>
+        <div class="team-book-cover">
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=500&h=500&q=80&auto=format&fit=crop" alt="Miembro del equipo veterinario" loading="lazy">
+          <div class="team-book-info">
+            <h3 class="font-display text-lg font-semibold">Asistente Veterinario</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-book" tabindex="0" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-book-content">
+          <i class="ph-fill ph-scissors text-2xl mb-3"></i>
+          <p class="label">Se encarga de</p>
+          <p class="text-sm">Baño, corte y cuidado estético de tu mascota, siempre cuidando que la experiencia sea tranquila y segura.</p>
+        </div>
+        <div class="team-book-cover">
+          <img src="https://images.unsplash.com/photo-1668434484076-6a99c0821bda?w=500&h=500&q=80&auto=format&fit=crop" alt="Miembro del equipo de grooming" loading="lazy">
+          <div class="team-book-info">
+            <h3 class="font-display text-lg font-semibold">Estética y Grooming</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIOS AMPLIADOS ===================== -->
+<section class="py-24 bg-aqua-light relative">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <span class="text-sm font-semibold uppercase tracking-[0.2em] text-aqua">Testimonios</span>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold mt-3">La confianza de Barva, reseña a reseña</h2>
+      <p class="mt-4 text-purple-dark/70">Seguí bajando para conocer más opiniones de nuestros clientes.</p>
+    </div>
+  </div>
+
+  <div class="review-stack-wrap mt-14">
+    <div class="review-stack-sticky">
+      <div class="review-stack-cards mx-auto">
+        <div class="review-stack-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm text-white shadow-md"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-base text-white/90 review-quote">"Nosotros llegamos con una gatita callejera que fue atropellada. Fuimos al lugar por cercanía y estuvo internada. Durante todo el proceso los médicos fueron muy comprensivos y competentes. Sus precios son justos, y la atención muy buena. Volvería a ir."</p>
+          <div class="mt-auto pt-5 border-t border-white/20">
+            <span class="review-rating-chip">
+              <span class="stars text-sm">★★★★★</span>
+              <span class="text-xs font-bold text-white">5.0</span>
+            </span>
+            <p class="font-display text-sm font-semibold text-white mt-1.5">Sebastian Sanchez</p>
+            <p class="text-[11px] text-white/60">Reseña de Google</p>
+          </div>
+        </div>
+
+        <div class="review-stack-card is-purple">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm text-white shadow-md"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-base text-white/90 review-quote">"La atención y el amor que tienen hacia los animales es lo que más me encanta de este lugar."</p>
+          <div class="mt-auto pt-5 border-t border-white/20">
+            <span class="review-rating-chip">
+              <span class="stars text-sm">★★★★★</span>
+              <span class="text-xs font-bold text-white">5.0</span>
+            </span>
+            <p class="font-display text-sm font-semibold text-white mt-1.5">Alexa Andreina Umaña Garcia</p>
+            <p class="text-[11px] text-white/60">Reseña de Google</p>
+          </div>
+        </div>
+
+        <div class="review-stack-card">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm text-white shadow-md"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-base text-white/90 review-quote">"Mi esposo y yo le llevamos a nuestro rescate Polar al Mr Patitas en muy mal estado y el veterinario fue increíble. Supo cómo ayudarnos de inmediato, y fue paciente con todas mis preguntas. Incluso nos recogieron de casa para la cita. Lo recomendaría muchísimo."</p>
+          <div class="mt-auto pt-5 border-t border-white/20">
+            <span class="review-rating-chip">
+              <span class="stars text-sm">★★★★★</span>
+              <span class="text-xs font-bold text-white">5.0</span>
+            </span>
+            <p class="font-display text-sm font-semibold text-white mt-1.5">Brie Rowan</p>
+            <p class="text-[11px] text-white/60">Reseña de Google</p>
+          </div>
+        </div>
+
+        <div class="review-stack-card is-purple">
+          <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/15 backdrop-blur-sm text-white shadow-md"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
+          <p class="mt-4 text-base text-white/90 review-quote">"Demasiado bello el lugar y los precios increíbles. Atendieron a mi perrita con demasiado cariño y me dieron atención con muchísima amabilidad. En verdad estoy muy agradecida, definitivamente me encantó el lugar. Excelente servicio."</p>
+          <div class="mt-auto pt-5 border-t border-white/20">
+            <span class="review-rating-chip">
+              <span class="stars text-sm">★★★★★</span>
+              <span class="text-xs font-bold text-white">5.0</span>
+            </span>
+            <p class="font-display text-sm font-semibold text-white mt-1.5">Ashley Zuñiga</p>
+            <p class="text-[11px] text-white/60">Reseña de Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CTA FINAL ===================== -->
+<section class="py-24">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8">
+    <div class="relative overflow-hidden rounded-[2.5rem] bg-purple-dark text-white px-8 py-16 text-center paw-pattern" data-aos="zoom-in">
+      <div class="absolute -top-10 -left-10 h-56 w-56 bg-aqua-medium/20 blob blob-blur"></div>
+      <h2 class="font-display text-3xl sm:text-4xl font-semibold relative">Sumate a la familia Mr. Patitas</h2>
+      <p class="mt-4 text-white/75 max-w-xl mx-auto relative">Agenda una cita hoy y descubrí por qué tantas familias de Barva confían en nosotros.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-4 relative">
+        <a href="contacto.html#formulario" class="rounded-full bg-aqua px-8 py-3.5 font-semibold hover:bg-aqua-medium transition-colors">Agendar cita</a>
+        <a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="rounded-full border-2 border-white px-8 py-3.5 font-semibold hover:bg-white/10 transition-colors">Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-purple-dark text-white paw-pattern relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <a href="index.html" class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center rounded-xl bg-white p-1"><img src="assets/logo-mr-patitas.jpg" alt="Mr. Patitas Clínica Veterinaria" class="h-9 w-9 object-contain"></span>
+        <span class="font-display text-lg font-semibold">Mr. Patitas</span>
+      </a>
+      <p class="text-sm text-white/60">Cuidamos a tu mejor amigo como familia, en el corazón de Barva, Heredia.</p>
+      <div class="flex gap-3 mt-5">
+        <a href="https://www.facebook.com/ClinicaveterinariaMr.Patitas" target="_blank" rel="noopener" class="social-btn social-btn--facebook" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+        <a href="https://www.instagram.com/clinica_veterinaria_mr.patitas/" target="_blank" rel="noopener" class="social-btn social-btn--instagram" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+        <a href="https://wa.me/50622620400" target="_blank" rel="noopener" class="social-btn social-btn--whatsapp" aria-label="WhatsApp"><i class="ph-fill ph-whatsapp-logo"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Navegación</h3>
+      <ul class="space-y-2.5 text-sm text-white/60">
+        <li><a href="index.html" class="hover:text-aqua-medium transition-colors">Inicio</a></li>
+        <li><a href="servicios.html" class="hover:text-aqua-medium transition-colors">Servicios</a></li>
+        <li><a href="nosotros.html" class="hover:text-aqua-medium transition-colors">Nosotros</a></li>
+        <li><a href="contacto.html" class="hover:text-aqua-medium transition-colors">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Servicios</h3>
+      <ul class="space-y-2.5 text-sm text-white/60">
+        <li><a href="servicios.html#consulta" class="hover:text-aqua-medium transition-colors">Consulta general</a></li>
+        <li><a href="servicios.html#cirugias" class="hover:text-aqua-medium transition-colors">Cirugías</a></li>
+        <li><a href="servicios.html#laboratorio" class="hover:text-aqua-medium transition-colors">Laboratorio</a></li>
+        <li><a href="servicios.html#grooming" class="hover:text-aqua-medium transition-colors">Grooming</a></li>
+        <li><a href="servicios.html#hospedaje" class="hover:text-aqua-medium transition-colors">Hospedaje</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-semibold mb-4">Contacto</h3>
+      <ul class="space-y-3 text-sm text-white/60">
+        <li class="flex gap-2"><i class="ph-fill ph-map-pin mt-0.5"></i> 125 m sur de la iglesia católica de Barva, Heredia</li>
+        <li class="flex gap-2"><i class="ph-fill ph-phone mt-0.5"></i> 2262-0400</li>
+        <li class="flex gap-2"><i class="ph-fill ph-clock mt-0.5"></i> Lun–Sáb, 8:00 a.m.–10:00 p.m.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-sm text-white/50">
+    © <span id="current-year"></span> Clínica Veterinaria Mr. Patitas. Todos los derechos reservados.
+  </div>
+</footer>
+
+<a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" class="whatsapp-float fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-aqua text-white shadow-2xl hover:bg-aqua-medium transition-colors">
+  <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
