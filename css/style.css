@@ -17,6 +17,26 @@ html {
   scroll-behavior: smooth;
 }
 
+/* clip (no hidden): evita el scroll lateral que provocan los elementos
+   aún no animados por AOS/data-reveal (translateX fuera del viewport),
+   sin crear un scroll container que rompería position: sticky. */
+html, body {
+  overflow-x: clip;
+}
+
+/* ---------- Carrusel de fondo del hero: varias fotos superpuestas que
+   se alternan con crossfade (ver initHeroSlideshow en js/main.js). ---------- */
+.hero-slide {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+.hero-slide.is-active {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { transition: none; }
+}
+
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   color: var(--purple-dark);
@@ -45,11 +65,6 @@ h1, h2, h3, h4, .font-display {
   background-size: 120px 120px;
 }
 
-.paw-pattern-dark {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='%2326215C' fill-opacity='0.05'%3E%3Cellipse cx='60' cy='72' rx='16' ry='13'/%3E%3Cellipse cx='40' cy='50' rx='7' ry='9'/%3E%3Cellipse cx='58' cy='40' rx='7' ry='9'/%3E%3Cellipse cx='78' cy='50' rx='7' ry='9'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 120px 120px;
-}
-
 /* ---------- Blobs orgánicos ---------- */
 .blob {
   border-radius: 63% 37% 54% 46% / 45% 41% 59% 55%;
@@ -71,7 +86,6 @@ h1, h2, h3, h4, .font-display {
   50% { transform: translateY(-14px); }
 }
 .float-anim { animation: floatY 5s ease-in-out infinite; }
-.float-anim-slow { animation: floatY 7s ease-in-out infinite; }
 .float-anim-delay { animation: floatY 6s ease-in-out infinite; animation-delay: 1.2s; }
 
 /* ---------- Botón flotante de WhatsApp ---------- */
@@ -224,15 +238,6 @@ h1, h2, h3, h4, .font-display {
   box-shadow: 0 0 0 4px rgba(29, 158, 117, 0.15);
 }
 
-/* ---------- Marquee de logos/reseñas (opcional scroll infinito) ---------- */
-.marquee-track {
-  animation: marqueeScroll 30s linear infinite;
-}
-@keyframes marqueeScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
 /* ---------- Estrellas ---------- */
 .stars {
   color: #F5B301;
@@ -241,7 +246,7 @@ h1, h2, h3, h4, .font-display {
 
 /* ---------- Utilidad: aparición base para AOS fallback ---------- */
 @media (prefers-reduced-motion: reduce) {
-  .blob, .float-anim, .float-anim-slow, .float-anim-delay, .whatsapp-float, .marquee-track {
+  .blob, .float-anim, .float-anim-delay, .whatsapp-float {
     animation: none !important;
   }
   html { scroll-behavior: auto; }
@@ -305,14 +310,6 @@ h1, h2, h3, h4, .font-display {
 .mobile-menu.open {
   max-height: 32rem;
   opacity: 1;
-}
-
-/* ---------- Divisor orgánico entre secciones ---------- */
-.section-curve {
-  display: block;
-  width: 100%;
-  height: auto;
-  line-height: 0;
 }
 
 /* ---------- Chip / badge ---------- */
@@ -548,19 +545,25 @@ h1, h2, h3, h4, .font-display {
 @media (prefers-reduced-motion: reduce) {
   .glass-fan-item { transition: none; }
 }
-/* En touch no existe :hover, así que el abanico nunca se despliega:
-   mostrarlo ya separado y sin rotación por defecto. */
+/* En touch no existe :hover, así que el abanico nunca se despliega: se
+   muestra como grilla fija (nunca desborda el ancho de la pantalla). */
 @media (hover: none), (max-width: 640px) {
   .glass-fan {
-    flex-wrap: wrap;
-    row-gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    width: 100%;
+    min-width: 0;
   }
   .glass-fan-item {
-    width: 76px;
-    height: 88px;
-    font-size: 0.65rem;
-    transform: rotate(0deg) !important;
-    margin: 0 5px !important;
+    width: 100%;
+    min-width: 0;
+    height: 84px;
+    font-size: 0.62rem;
+    padding: 0 4px;
+    overflow-wrap: break-word;
+    transform: none !important;
+    margin: 0 !important;
   }
 }
 

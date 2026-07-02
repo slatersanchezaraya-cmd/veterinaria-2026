@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initReviewStack();
   initFlipCardsTouch();
   initBookTouchToggle();
+  initHeroSlideshow();
   initYear();
 });
 
@@ -255,9 +256,12 @@ function initBookingCalendar() {
       btn.type = "button";
       btn.className = "cal-day";
       btn.textContent = String(day);
+      btn.setAttribute("aria-label", `${day} de ${MESES[viewMonth]} de ${viewYear}`);
 
       if (date < today) btn.disabled = true;
-      if (selectedDate && isSameDay(date, selectedDate)) btn.classList.add("is-selected");
+      const isSelected = selectedDate && isSameDay(date, selectedDate);
+      if (isSelected) btn.classList.add("is-selected");
+      btn.setAttribute("aria-pressed", String(Boolean(isSelected)));
 
       btn.addEventListener("click", () => {
         selectedDate = date;
@@ -435,4 +439,20 @@ function initBookTouchToggle() {
 function initYear() {
   const yearEl = document.getElementById("current-year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+// Alterna las fotos de fondo del hero con crossfade cada 5s.
+function initHeroSlideshow() {
+  const wrap = document.getElementById("hero-slideshow");
+  if (!wrap) return;
+  const slides = Array.from(wrap.querySelectorAll(".hero-slide"));
+  if (slides.length < 2) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove("is-active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("is-active");
+  }, 5000);
 }

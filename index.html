@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="Cuidamos a tu mejor amigo como familia. Consulta, cirugías, laboratorio, grooming y hospedaje en Barva, Heredia.">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1200&h=630&q=80&auto=format&fit=crop">
 
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=900&h=1000&q=80&auto=format&fit=crop" fetchpriority="high">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1920&h=1200&q=80&auto=format&fit=crop" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
@@ -121,9 +121,13 @@
 <main id="main-content">
 <!-- ===================== HERO ===================== -->
 <section class="relative bg-purple-light">
-  <div class="relative h-[560px] sm:h-[620px] lg:h-[680px] w-full overflow-hidden">
-    <!-- REEMPLAZAR con foto real de una mascota atendida en la clínica -->
-    <img src="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Perrito siendo atendido con cariño en la Clínica Veterinaria Mr. Patitas" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+  <div class="h-16 sm:h-20 bg-purple-dark"></div>
+  <div class="relative h-[560px] sm:h-[620px] lg:h-[680px] w-full overflow-hidden" id="hero-slideshow">
+    <!-- REEMPLAZAR con fotos reales de mascotas atendidas en la clínica -->
+    <img src="https://images.unsplash.com/photo-1654895716780-b4664497420d?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Perrito siendo atendido con cariño en la Clínica Veterinaria Mr. Patitas" class="hero-slide is-active absolute inset-0 w-full h-full object-cover" loading="eager" fetchpriority="high">
+    <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Perro y gato acurrucados como familia" class="hero-slide absolute inset-0 w-full h-full object-cover" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Gato atendido con cariño" class="hero-slide absolute inset-0 w-full h-full object-cover" loading="lazy">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1920&h=1200&q=80&auto=format&fit=crop" alt="Perros felices y saludables" class="hero-slide absolute inset-0 w-full h-full object-cover" loading="lazy">
     <div class="absolute inset-0 bg-gradient-to-r from-purple-dark/90 via-purple-dark/55 to-purple-dark/10"></div>
     <div class="absolute inset-0 bg-gradient-to-t from-purple-dark/70 via-transparent to-transparent"></div>
 
@@ -146,7 +150,7 @@
       </div>
     </div>
 
-    <div class="float-anim absolute right-4 sm:right-10 top-24 sm:top-28 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow flex items-center gap-2 sm:gap-3">
+    <div class="float-anim hidden sm:flex absolute right-4 sm:right-10 top-24 sm:top-28 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow items-center gap-2 sm:gap-3">
       <span class="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-aqua-light text-aqua"><i class="ph-fill ph-first-aid-kit text-base sm:text-xl"></i></span>
       <div class="text-left">
         <p class="text-sm font-semibold text-purple-dark">Emergencias</p>
@@ -154,7 +158,7 @@
       </div>
     </div>
 
-    <div class="float-anim-delay absolute right-4 sm:right-10 top-40 sm:top-48 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow flex items-center gap-2 sm:gap-3">
+    <div class="float-anim-delay hidden sm:flex absolute right-4 sm:right-10 top-40 sm:top-48 rounded-2xl bg-white px-3 py-2 sm:px-4 sm:py-3 badge-glow items-center gap-2 sm:gap-3">
       <span class="flex h-8 w-8 sm:h-10 sm:w-10 shrink-0 items-center justify-center rounded-xl bg-purple-light text-purple-medium"><i class="ph-fill ph-map-pin text-base sm:text-xl"></i></span>
       <div class="text-left">
         <p class="text-sm font-semibold text-purple-dark">Barva, Heredia</p>
@@ -361,7 +365,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"He visitado varias clínicas en Barva y puedo decir esta es la mejor. Desde que llamé para agendar una cita me atendieron con muchísima amabilidad y me dieron prioridad por ser una emergencia."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Jennifer Castro García</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -370,7 +374,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Buen trabajo, buenos precios y excelente servicio, como siempre."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Gerardo Quesada Alvarado</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -379,7 +383,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y gran atención."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Fabián Rojas</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -389,7 +393,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"He visitado varias clínicas en Barva y puedo decir esta es la mejor. Desde que llamé para agendar una cita me atendieron con muchísima amabilidad y me dieron prioridad por ser una emergencia."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Jennifer Castro García</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -398,7 +402,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Buen trabajo, buenos precios y excelente servicio, como siempre."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Gerardo Quesada Alvarado</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -407,7 +411,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y gran atención."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Fabián Rojas</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -419,7 +423,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Siempre atienden super bien. He llevado a mi perro y 7 gatas, ninguna queja, continuaré llevándolos con ellos."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Ignacio Sandi</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -428,7 +432,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y muy buena atención. Variedad de productos y alimentos para mascotas."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Kris Arguedas</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -437,7 +441,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente atención, precios y calidad de productos y servicios."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Johnny Castro Alvarado</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -447,7 +451,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Siempre atienden super bien. He llevado a mi perro y 7 gatas, ninguna queja, continuaré llevándolos con ellos."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Ignacio Sandi</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -456,7 +460,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y muy buena atención. Variedad de productos y alimentos para mascotas."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Kris Arguedas</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -465,7 +469,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente atención, precios y calidad de productos y servicios."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Johnny Castro Alvarado</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -477,7 +481,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"El mejor servicio y atención de la zona, te hacen sentir de la familia."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">AD DA</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -486,7 +490,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Sinceramente son muy buenas personas los dueños. Los recomiendo al 100%."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Yojan Arley</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -495,7 +499,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y productos de calidad."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Bernal Mont</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -505,7 +509,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"El mejor servicio y atención de la zona, te hacen sentir de la familia."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">AD DA</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -514,7 +518,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-purple-light text-purple-medium"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Sinceramente son muy buenas personas los dueños. Los recomiendo al 100%."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Yojan Arley</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -523,7 +527,7 @@
           <span class="flex h-11 w-11 items-center justify-center rounded-2xl bg-aqua-light text-aqua"><i class="ph-fill ph-quotes-fill text-xl"></i></span>
           <p class="mt-4 text-sm text-purple-dark/80">"Excelente servicio y productos de calidad."</p>
           <div class="mt-4 pt-4 border-t border-purple-light">
-            <span class="stars text-sm">★★★★★</span>
+            <span class="stars text-sm" aria-hidden="true">★★★★★</span>
             <p class="font-display text-sm font-semibold text-purple-dark mt-1">Bernal Mont</p>
             <p class="text-[11px] text-purple-dark/50">Reseña de Google</p>
           </div>
@@ -533,7 +537,7 @@
 
     <div class="mt-10 text-center" data-aos="fade-up">
       <span class="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 badge-glow">
-        <span class="stars text-sm">★★★★★</span>
+        <span class="stars text-sm" aria-hidden="true">★★★★★</span>
         <span class="text-sm font-semibold text-purple-dark">4.6 de calificación con 69 reseñas en Google</span>
       </span>
     </div>
@@ -645,7 +649,7 @@
 
 <!-- ===================== WHATSAPP FLOTANTE ===================== -->
 <a href="https://wa.me/50622620400?text=Hola%20Mr.%20Patitas%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp" class="whatsapp-float fixed bottom-6 right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-aqua text-white shadow-2xl hover:bg-aqua-medium transition-colors">
-  <i class="ph-fill ph-whatsapp-logo text-3xl"></i>
+  <svg viewBox="0 0 24 24" fill="currentColor" class="h-8 w-8" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
